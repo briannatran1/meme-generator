@@ -12,3 +12,28 @@
   border-radius: 4px;
 }
 
+.meme {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.meme .meme-content {
+  position: relative;
+}
+
+.meme .top-text, .meme .bottom-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+.meme img {
+  width: 300px;
+  height: 300px;
+}
