@@ -2,6 +2,7 @@
 //clear form inputs
 //create meme
 //add meme to container
+//remove meme from container if clicked on
 
 document.addEventListener('DOMContentLoaded', function(){
     let newMeme = document.getElementById('meme-form');
@@ -19,11 +20,17 @@ document.addEventListener('DOMContentLoaded', function(){
 
         let meme = document.createElement('div');
         meme.classList.add('meme');
+
+        let memeContent = document.createElement('div');
+        memeContent.classList.add('meme-content');
+
         let img = document.createElement('img');
         img.src = url;
+
         let topTextDiv = document.createElement('div');
         topTextDiv.classList.add('top-text');
         topTextDiv.innerText = topText;
+
         let bottomTextDiv = document.createElement('div');
         bottomTextDiv.classList.add('bottom-text');
         bottomTextDiv.innerText = bottomText;
@@ -32,6 +39,11 @@ document.addEventListener('DOMContentLoaded', function(){
         meme.appendChild(topTextDiv);
         meme.appendChild(bottomTextDiv);
 
-
-    })
+        container.appendChild(meme);
+    });
+    container.addEventListener('click', function(evt){
+        if(evt.target.classList.contains('meme')){
+            evt.target.remove();
+        }
+    });
 });
