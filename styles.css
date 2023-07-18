@@ -1,5 +1,5 @@
 .container {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -22,7 +22,7 @@
   position: relative;
 }
 
-.meme .top-text, .meme .bottom-text {
+.meme .text-overlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -34,16 +34,8 @@
 }
 
 .meme img {
-  width: 300px;
-  height: 300px;
-}
-
-#top-text {
-  top: 10px;
-}
-
-#bottom-text {
-  bottom: 10px
+  width: 50%;
+  height: 50%;
 }
 
 label {
