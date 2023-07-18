@@ -7,6 +7,9 @@
 document.addEventListener('DOMContentLoaded', function(){
     let newMeme = document.getElementById('meme-form');
     let container = document.getElementById('meme-space');
+    function removeMeme(evt){
+        evt.target.closest('.meme').remove();
+    }
     newMeme.addEventListener('submit', function(evt){
         evt.preventDefault();
 
@@ -18,33 +21,24 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('top-text').value = '';
         document.getElementById('bottom-text').value = '';
 
-        let meme = document.createElement('div');
-        meme.classList.add('meme');
-
-        let memeContent = document.createElement('div');
-        memeContent.classList.add('meme-content');
+        let memeDiv = document.createElement('div');
+        memeDiv.classList.add('meme');
 
         let img = document.createElement('img');
         img.src = url;
+        memeDiv.appendChild(img);
 
         let topTextDiv = document.createElement('div');
-        topTextDiv.classList.add('text-overlay');
+        topTextDiv.classList.add('top-text');
         topTextDiv.innerText = topText;
+        memeDiv.appendChild(topTextDiv);
 
         let bottomTextDiv = document.createElement('div');
-        bottomTextDiv.classList.add('text-overlay');
+        bottomTextDiv.classList.add('bottom-text');
         bottomTextDiv.innerText = bottomText;
+        memeDiv.appendChild(bottomTextDiv);
 
-        meme.appendChild(img);
-        meme.appendChild(topTextDiv);
-        meme.appendChild(bottomTextDiv);
-        meme.appendChild(memeContent);
-
-        container.appendChild(meme);
-    });
-    container.addEventListener('click', function(evt){
-        if(evt.target.classList.contains('meme')){
-            evt.target.remove();
-        }
+        container.appendChild(memeDiv);
+        memeDiv.addEventListener('click', removeMeme);
     });
 });
