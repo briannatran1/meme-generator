@@ -28,16 +28,17 @@ document.addEventListener('DOMContentLoaded', function(){
         img.src = url;
 
         let topTextDiv = document.createElement('div');
-        topTextDiv.classList.add('top-text');
+        topTextDiv.classList.add('text-overlay');
         topTextDiv.innerText = topText;
 
         let bottomTextDiv = document.createElement('div');
-        bottomTextDiv.classList.add('bottom-text');
+        bottomTextDiv.classList.add('text-overlay');
         bottomTextDiv.innerText = bottomText;
 
         meme.appendChild(img);
         meme.appendChild(topTextDiv);
         meme.appendChild(bottomTextDiv);
+        meme.appendChild(memeContent);
 
         container.appendChild(meme);
     });
