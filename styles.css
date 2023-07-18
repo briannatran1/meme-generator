@@ -22,7 +22,7 @@
   position: relative;
 }
 
-.meme .text-overlay {
+.meme > .top-text, .meme > .bottom-text {
   position: absolute;
   left: 0;
   right: 0;
