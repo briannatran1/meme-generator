@@ -18,10 +18,6 @@
   margin: 10px;
 }
 
-.meme .meme-content {
-  position: relative;
-}
-
 .meme > .top-text, .meme > .bottom-text {
   position: absolute;
   left: 0;
