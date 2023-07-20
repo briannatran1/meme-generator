@@ -24,9 +24,13 @@ document.addEventListener('DOMContentLoaded', function(){
         let memeDiv = document.createElement('div');
         memeDiv.classList.add('meme');
 
+        let imgDiv = document.createElement('div');
+        imgDiv.classList.add('meme-content');
+
         let img = document.createElement('img');
         img.src = url;
-        memeDiv.appendChild(img);
+        imgDiv.appendChild(img);
+        memeDiv.appendChild(imgDiv);
 
         let topTextDiv = document.createElement('div');
         topTextDiv.classList.add('top-text');
@@ -38,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function(){
         bottomTextDiv.innerText = bottomText;
         memeDiv.appendChild(bottomTextDiv);
 
+        memeDiv.appendChild(imgDiv);
         container.appendChild(memeDiv);
         memeDiv.addEventListener('click', removeMeme);
     });
