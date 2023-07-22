@@ -16,14 +16,15 @@
   position: relative;
   display: inline-block;
   margin: 10px;
+  width: 75%;
 }
 
 .meme > .top-text, .meme > .bottom-text {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 0px;
+  right: 0px;
   text-align: center;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px black;
