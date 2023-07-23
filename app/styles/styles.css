@@ -20,7 +20,10 @@ form {
   position: relative;
   display: inline-block;
   margin: 10px;
-  width: 75%;
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .meme > .top-text, .meme > .bottom-text {
@@ -28,10 +31,13 @@ form {
   left: 0px;
   right: 0px;
   text-align: center;
-  font-size: 50px;
+  font-size: 1.4rem;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px black;
+  width: 300px;
+  overflow-wrap: break-word;
+
 }
 
 .meme > .top-text {
@@ -40,13 +46,14 @@ form {
 
 .meme > .bottom-text {
   bottom: 10px;
+  padding-bottom: 20px;
 }
-
+/*
 .meme img {
-  width: 100%;
-  height: auto;
+  width: 50%;
+  height: 50%;
   border-radius: 10px;
-}
+} */
 
 label {
   margin-top: 10px;
@@ -54,6 +61,8 @@ label {
 
 #meme-space {
   margin-top: 50px;
+  width: 100%;
+  padding-left: 200px;
 }
 
 .close-button {
@@ -61,8 +70,9 @@ label {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 200px;
+  font-size: 150px;
   color: red;
+  opacity: 0.5;
   cursor: pointer;
   padding: 5px 8px;
   border-radius: 50%;
@@ -72,3 +82,4 @@ label {
 .meme:hover .close-button {
   display: block;
 }
+
