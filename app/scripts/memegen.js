@@ -1,3 +1,5 @@
+//create function that removes meme
+//create remove button when hovering over meme
 //get form values
 //clear form inputs
 //create meme
@@ -34,17 +36,17 @@ document.addEventListener('DOMContentLoaded', function(){
         let memeDiv = document.createElement('div');
         memeDiv.classList.add('meme');
 
-        // let imgDiv = document.createElement('div');
-        // imgDiv.classList.add('meme-content');
+        let imgDiv = document.createElement('div');
+        imgDiv.classList.add('meme-content');
 
         let closeButton = removeButton();
         memeDiv.appendChild(closeButton);
 
-        //let img = document.createElement('img');
-        memeDiv.style.background = 'url(' + url + ')';
-        // img.src = url;
-        // imgDiv.appendChild(img);
-        // memeDiv.appendChild(imgDiv);
+        let img = document.createElement('img');
+        // memeDiv.style.background = 'url(' + url + ')';
+        img.src = url;
+        imgDiv.appendChild(img);
+        memeDiv.appendChild(imgDiv);
 
         let topTextDiv = document.createElement('div');
         topTextDiv.classList.add('top-text');
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
         bottomTextDiv.innerText = bottomText;
         memeDiv.appendChild(bottomTextDiv);
 
-        // memeDiv.appendChild(imgDiv);
+        memeDiv.appendChild(imgDiv);
         container.appendChild(memeDiv);
         memeDiv.addEventListener('click', removeMeme);
     });
