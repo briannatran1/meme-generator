@@ -37,7 +37,8 @@ form {
   text-shadow: 2px 2px 4px black;
   width: 300px;
   overflow-wrap: break-word;
-
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .meme > .top-text {
