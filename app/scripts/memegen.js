@@ -7,9 +7,19 @@
 document.addEventListener('DOMContentLoaded', function(){
     let newMeme = document.getElementById('meme-form');
     let container = document.getElementById('meme-space');
+
     function removeMeme(evt){
         evt.target.closest('.meme').remove();
     }
+
+    function removeButton(){
+        let closeButton = document.createElement('div');
+        closeButton.innerText = 'x';
+        closeButton.classList.add('close-button');
+        closeButton.addEventListener('click', removeMeme);
+        return closeButton;
+    }
+
     newMeme.addEventListener('submit', function(evt){
         evt.preventDefault();
 
@@ -26,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
         let imgDiv = document.createElement('div');
         imgDiv.classList.add('meme-content');
+
+        let closeButton = removeButton();
+        memeDiv.appendChild(closeButton);
 
         let img = document.createElement('img');
         img.src = url;
