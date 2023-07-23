@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
         memeDiv.appendChild(closeButton);
 
         //let img = document.createElement('img');
-        memeDiv.style.backgroundImage = 'url(' + url + ')';
+        memeDiv.style.background = 'url(' + url + ')';
         // img.src = url;
         // imgDiv.appendChild(img);
         // memeDiv.appendChild(imgDiv);
