@@ -9,29 +9,33 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="text-center mt-4 mb-4">Meme Generator!</h1>
-    <p class="text-center">Fill out the form to create your own meme.</p>
-    <form id="meme-form">
-      <div class="row mb-3">
-        <label for="url" class="col-sm-2 col-form-label">Image URL</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="url" placeholder="URL for meme image">
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="text-center mt-4 mb-4">Meme Generator!</h1>
+        <p class="text-center">Fill out the form to create your own meme.</p>
+        <form id="meme-form">
+          <div class="row mb-3">
+            <label for="url" class="col-sm-2 col-form-label">Image URL</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="url" placeholder="URL for meme image">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="top-text" class="col-sm-2 col-form-label">Text on Top</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="top-text" name="top-text" placeholder="(Optional) Text at top of the meme">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="bottom-text" class="col-sm-2 col-form-label">Text on Bottom</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="bottom-text" name="bottom-text" placeholder="(Optional) Text at bottom of the meme">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="create-meme">Create meme</button>
+        </form>
       </div>
-      <div class="row mb-3">
-        <label for="top-text" class="col-sm-2 col-form-label">Text on Top</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="top-text" name="top-text" placeholder="(Optional) Text at top of the meme">
-        </div>
-      </div>
-      <div class="row mb-3">
-        <label for="bottom-text" class="col-sm-2 col-form-label">Text on Bottom</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="bottom-text" name="bottom-text" placeholder="(Optional) Text at bottom of the meme">
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary" id="create-meme">Create meme</button>
-    </form>
+    </div>
     <div id="meme-space"></div>
   </div>
   <script src="scripts/memegen.js"></script>
