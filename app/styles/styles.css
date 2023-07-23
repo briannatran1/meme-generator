@@ -83,3 +83,16 @@ label {
   display: block;
 }
 
+body {
+  background-color: lavender;
+}
+
+.btn-primary:hover {
+  background-color: #C3B1E1;
+  border-color: #C3B1E1;
+}
+
+.btn-primary {
+  background-color: #E0B0FF;
+  border-color: #E0B0FF;
+}
